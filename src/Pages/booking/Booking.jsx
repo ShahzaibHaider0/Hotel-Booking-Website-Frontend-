@@ -26,7 +26,7 @@ const Booking = () => {
   useEffect(() => {
     const userId = Cookies.get("userID");
 
-    fetch(`https://glimmer-petal-ceder.glitch.me/api/users/${userId}`, {
+    fetch(`https://backend-seven-lake-45.vercel.app/api/users/${userId}`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -44,7 +44,7 @@ const Booking = () => {
           }));
         }
       });
-    fetch(`https://glimmer-petal-ceder.glitch.me/api/rooms/${roomId}`, {
+    fetch(`https://backend-seven-lake-45.vercel.app/api/rooms/${roomId}`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -72,7 +72,7 @@ const Booking = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch("https://glimmer-petal-ceder.glitch.me/api/bookings/add", {
+      const response = await fetch("https://backend-seven-lake-45.vercel.app/api/bookings/add", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         credentials: 'include',

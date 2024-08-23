@@ -13,7 +13,7 @@ const List = () => {
 
   useEffect(() => {
     // Fetch data from API
-    fetch('https://glimmer-petal-ceder.glitch.me/api/rooms/', {
+    fetch('https://backend-seven-lake-45.vercel.app/api/rooms/', {
       method: 'GET', 
       credentials: 'include', 
     })

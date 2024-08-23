@@ -14,7 +14,7 @@ const Login = () => {
     console.log(`Login with email: ${email}, role: ${role}`);
 
     try {
-      const response = await fetch("https://glimmer-petal-ceder.glitch.me/api/users/login", {
+      const response = await fetch("https://backend-seven-lake-45.vercel.app/api/users/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password, role }),
@@ -33,7 +33,7 @@ const Login = () => {
 
         setTimeout(() => {
           if (data.role === "admin") {
-            navigate("https://finalproject-adminportal.vercel.app");
+            navigate("https://adminportal-five.vercel.app/");
           } else {
             navigate("/");
           }

@@ -20,7 +20,7 @@ const Register = () => {
     console.log(`Register with email: ${email}, role: ${role}`);
 
     try {
-      const response = await fetch("https://glimmer-petal-ceder.glitch.me/api/users/register", {
+      const response = await fetch("https://backend-seven-lake-45.vercel.app/api/users/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -40,7 +40,7 @@ const Register = () => {
 
         // Redirect based on role
         if (data.role === "admin") {
-          navigate("https://finalproject-adminportal.vercel.app");
+          navigate("https://adminportal-five.vercel.app/");
         } else {
           navigate("/");
         }

@@ -14,7 +14,7 @@ const Review = () => {
     e.preventDefault();
     if (reviewText.trim()) {
       try {
-        const response = await fetch('https://glimmer-petal-ceder.glitch.me/api/reviews/', {
+        const response = await fetch('https://backend-seven-lake-45.vercel.app/api/reviews/', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -42,7 +42,7 @@ const Review = () => {
   useEffect(() => {
     const fetchReviews = async () => {
       try {
-        const response = await fetch(`https://glimmer-petal-ceder.glitch.me/api/reviews/${_id}`, {
+        const response = await fetch(`https://backend-seven-lake-45.vercel.app/api/reviews/${_id}`, {
           method: 'GET', 
           credentials: 'include', 
         });
